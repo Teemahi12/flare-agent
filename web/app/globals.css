@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-base-bg text-slate-900 antialiased; font-feature-settings: "cv11", "ss01"; }
+
+::selection { background: rgba(0, 82, 255, 0.15); }
+
+/* ---------- surfaces ---------- */
+.card { @apply rounded-2xl border border-base-line bg-white p-6 shadow-card; }
+.card-hover { @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-pop hover:border-brand-100; }
+.card-dark { @apply rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl; }
+.container-x { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
+
+/* ---------- buttons ---------- */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-violet
+  px-5 py-3 text-sm font-semibold text-white shadow-pop transition-all duration-150
+  hover:brightness-110 hover:shadow-glow active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none;
+}
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-base-line bg-white px-5 py-3
+  text-sm font-semibold text-slate-800 transition-all duration-150 hover:border-brand-100 hover:bg-brand-50 active:scale-[0.98];
+}
+.btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-slate-900; }
+.btn-danger { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700 transition hover:bg-red-100 active:scale-[0.98]; }
+
+/* ---------- forms ---------- */
+.label { @apply mb-1.5 block text-[13px] font-semibold text-slate-700; }
+.input { @apply w-full rounded-xl border border-base-line bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10; }
+.input-amount { @apply font-mono text-lg font-bold; }
+.hint { @apply text-xs text-slate-500; }
+
+/* ---------- badges / pills ---------- */
+.badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide; }
+.badge-blue { @apply bg-brand-50 text-brand-600; }
+.badge-green { @apply bg-emerald-50 text-emerald-700; }
+.badge-amber { @apply bg-amber-50 text-amber-700; }
+.badge-red { @apply bg-red-50 text-red-700; }
+.badge-slate { @apply bg-slate-100 text-slate-600; }
+.badge-violet { @apply bg-violet-50 text-violet-700; }
+
+/* ---------- type ---------- */
+.h-display { @apply text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl; }
+.h-section { @apply text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl; }
+.lead { @apply text-base leading-relaxed text-slate-600 sm:text-lg; }
+.gradient-text { @apply bg-gradient-to-r from-brand-500 via-brand-violet to-brand-500 bg-clip-text text-transparent; }
+.eyebrow { @apply inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-600; }
+
+/* ---------- data display ---------- */
+.stat-value { @apply font-mono text-2xl font-extrabold tracking-tight text-slate-900 sm:text-[28px]; }
+.stat-label { @apply text-[13px] font-medium text-slate-500; }
+.table-row { @apply flex items-center justify-between gap-3 border-b border-base-line px-5 py-3.5 text-sm last:border-0 hover:bg-slate-50/70 transition; }
+.addr { @apply font-mono text-[13px] font-semibold; }
+
+/* ---------- misc ---------- */
+.divider { @apply h-px w-full bg-base-line; }
+.skeleton { @apply animate-pulse rounded-lg bg-slate-200/70; }
+.shimmer {
+  background: linear-gradient(110deg, #eef1f6 40%, #f8fafc 50%, #eef1f6 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+.hero-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, black 55%, transparent 100%);
+}
+.dot-live { @apply relative flex h-2.5 w-2.5; }
+.dot-live::after { @apply absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 content-[""]; }
+.dot-live::before { @apply absolute inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500 content-[""]; }

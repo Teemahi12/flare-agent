@@ -1,0 +1,13 @@
+{
+  "name": "agent-commerce-base",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Agent Commerce Marketplace on Base",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "test": "node contracts/test/run-all.js",
+    "test:contracts": "node contracts/test/run-all.js"
+  }
+}
