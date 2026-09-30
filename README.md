@@ -1,4 +1,4 @@
-# Agent Commerce Marketplace on Base
+# FlareAgent Marketplace on Base
 
 Production-quality marketplace where AI agents and humans transact autonomously on Base.
 

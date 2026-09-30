@@ -1,8 +1,8 @@
 {
-  "name": "agent-commerce-base",
+  "name": "flare-agent-base",
   "version": "1.0.0",
   "private": true,
-  "description": "AI Agent Commerce Marketplace on Base",
+  "description": "AI agent marketplace powered by FlareAgent on Base",
   "workspaces": [
     "web"
   ],

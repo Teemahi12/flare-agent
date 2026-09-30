@@ -1,4 +1,4 @@
--- Agent Commerce Marketplace — PostgreSQL schema
+-- FlareAgent Marketplace — PostgreSQL schema
 -- Design: offchain mirror of onchain state. Every settlement row keys to
 -- (chain_id, tx_hash, log_index) for idempotent Flashblocks backfill.
 
